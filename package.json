@@ -1,0 +1,25 @@
+{
+	"name": "latest-recent-posts",
+	"version": "0.1.0",
+	"description": "A new block created by the create-block tool using a custom external project template.",
+	"author": "Mark Salvatore",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php"
+	},
+	"prettier": "@wordpress/prettier-config",
+	"devDependencies": {
+		"@wordpress/scripts": "^27.8.0"
+	},
+	"dependencies": {
+		"@wordpress/data": "^9.27.0",
+		"@wordpress/element": "^5.34.0"
+	}
+}

@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "msalv/latest-recent-posts",
+	"version": "0.1.0",
+	"title": "Latest Recent Posts",
+	"category": "widgets",
+	"icon": "admin-post",
+	"description": "A new block created by the create-block tool using a custom external project template.",
+	"example": {
+		"attributes": {
+			"textinput": "Example text input",
+			"fontsize": 8
+		}
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"style": {
+			"type": "object",
+			"padding": {
+				"top": "1em",
+				"right": "1em",
+				"bottom": "1em",
+				"left": "1em"
+			},
+			"default": {
+				"color": {
+					"background": "#F9F9F9"
+				}
+			}
+		},
+		"numberOfPosts": {
+      "type": "number",
+      "default": 5
+    },
+		"displayFeaturedImage": {
+      "type": "boolean",
+      "default": true
+    },
+		"postOrder": {
+      "type": "string",
+      "default": "desc"
+    },
+		"postOrderBy": {
+      "type": "string",
+      "default": "date"
+    },
+    "selectedCategories": {
+      "type": "array",
+      "item": "object"
+    },
+    "isLinkedToPost": {
+      "type": "boolean",
+      "default": true
+    },
+    "numberOfColumns": {
+      "type": "number",
+      "default": 3
+    }
+	},
+	"supports": {
+		"html": false,
+		"align": true,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": false
+		}
+	},
+	"textdomain": "latest-recent-posts",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
