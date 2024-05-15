@@ -127,12 +127,24 @@ export default function Edit( { attributes, setAttributes } ) {
 						onChange={ toggleDisplayFeaturedImage }
 					/>
 					<SelectControl
-						label="Number of Columns"
+						label={ __( 'Number of Columns', metadata.textdomain ) }
 						value={ numberOfColumns }
 						options={ [
-							{ label: 'One columns', value: '1' },
-							{ label: 'Two columns', value: '2' },
-							{ label: 'Three columns', value: '3' },
+							{
+								label: __( 'One column', metadata.textdomain ),
+								value: '1',
+							},
+							{
+								label: __( 'Two Columns', metadata.textdomain ),
+								value: '2',
+							},
+							{
+								label: __(
+									'Three Columns',
+									metadata.textdomain
+								),
+								value: '3',
+							},
 						] }
 						onChange={ ( numberOfColumns ) =>
 							setAttributes( { numberOfColumns } )
